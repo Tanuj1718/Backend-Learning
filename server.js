@@ -11,20 +11,16 @@ const PORT = process.env.PORT || 3000;
 app.get('/', (req, res)=>{
     res.json(`Welcome to our Hotel!!`)
 })
-// //import the router files
+
+//import the router files
 const personRoutes = require('./routes/personRoutes.js')
 //use the routers
 app.use('/person', personRoutes)
 
-// //import the menu router file
-// const menuRoutes = require('./routes/menuRoutes.js')
-// //use the routers
-// app.use('/menuItem', menuRoutes)
-
-// //import the player router file
-// const playerRoutes = require('./routes/playerRoutes.js')
-// //use the routers
-// app.use('/player', playerRoutes);
+//import the menu router file
+const menuRoutes = require('./routes/menuRoutes.js')
+//use the routers
+app.use('/menuItem', menuRoutes)
 
 
 app.listen(3000, ()=>{

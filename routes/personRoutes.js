@@ -10,7 +10,7 @@ router.post('/', async(req, res)=>{
         const newPerson = new Person(data);
         const response = await newPerson.save();
         console.log('data saved');
-        res.status(200).json(data);
+        res.status(200).json(response);
     } catch (err) {
         console.log(err);
         res.status(500).json({error: "Internal server error"});
