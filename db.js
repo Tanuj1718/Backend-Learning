@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 require('dotenv').config();
+const bcrypt = require('bcrypt')
 //define mongodb connection url
 //const mongoURL = process.env.MONGODB_URL
 const mongoURL = process.env.MONGODB_URL_LOCAL
