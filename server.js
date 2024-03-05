@@ -29,7 +29,7 @@ app.get('/', localAuthMiddleware, logRequest, (req, res) =>{
 //import the router files
 const personRoutes = require('./routes/personRoutes.js')
 //use the routers
-app.use('/person',localAuthMiddleware, personRoutes)
+app.use('/person', personRoutes)
 
 //import the menu router file
 const menuRoutes = require('./routes/menuRoutes.js')
